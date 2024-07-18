@@ -179,10 +179,10 @@
     
    </style>
    
-   <main class="main w-full">
+   <main class="main ">
      <div class="flex pt-8 w-100">
        <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก VENDOR -> SANKO</p>
-       <p class="flex-1 text-right">18/4/2024</p>
+       <p class="flex-1 text-right"> {{currentDate | date: 'medium'}} </p>
      </div>
      <div>
        <div class="flex flex-col">
@@ -370,18 +370,33 @@
          </div>
        </div>
      </div>
-     
+
+     <div class="flex mt-32 z-50 w-full h-24 bg-white ">
+      <h1 class="flex-1 ">Total</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 blue">Wait</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 blue">Wait(C)</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 green">Complete</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 red">Delay</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 yellow">Cancel</h1>
+      <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
+     </div>
+
      <div class="flex fixed bottom-0 left-0 z-50 w-full h-16 bg-white border border-black  ">
        <div class="flex-1 w-3/12 pt-4">เลือกหน้า</div>
        <div class="flex-1 grid h-full max-w-lg grid-cols-2 mx-auto font-medium">
            
-           <button routerLink="/dash1" type="button" class="  inline-flex flex-col items-center justify-center px-5   group">
+           <a routerLink="/dash1" type="button" class="  inline-flex flex-col items-center justify-center px-5   group">
             
                <p class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">SANKO->VD</p> 
-           </button>
-           <button routerLink="/dash2" type="button" class=" flex-1 inline-flex flex-col items-center justify-center px-5   group">
+           </a>
+           <a routerLink="/dash2" type="button" class=" flex-1 inline-flex flex-col items-center justify-center px-5   group">
                <p class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
-           </button>
+           </a>
        </div>
        <div class="pt-4 pr-12 text-right flex-1">เวลา</div>
    </div>

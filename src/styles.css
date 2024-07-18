@@ -24,3 +24,21 @@ main{
     font-size: 30px;
     text-align: center;
 }
+input{
+    width: 40px;
+}
+.yellow{
+    color: yellow;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.blue{
+    color: blue;
+}
