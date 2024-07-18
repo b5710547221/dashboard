@@ -17,3 +17,10 @@ hr {
     margin: 1em 0;
     padding: 0;
   }
+main{
+    font-size: 30px;
+}
+.tb1{
+    font-size: 30px;
+    text-align: center;
+}
