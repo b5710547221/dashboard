@@ -182,7 +182,8 @@
    <main class="main ">
      <div class="flex pt-8 w-100">
        <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก VENDOR -> SANKO</p>
-       <p class="flex-1 text-right"> {{currentDate | date: 'medium'}} </p>
+       <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div> 
+       <div><h1> {{ rxTime | date: 'hh:mm:ss a' }} </h1></div>
      </div>
      <div>
        <div class="flex flex-col">
@@ -398,8 +399,12 @@
                <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
            </a>
        </div>
-       <div class="pt-4 pr-12 text-right flex-1">{{currentDate | date: 'medium'}} </div>
-   </div>
+       <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div> 
+    
+     
+    
+    
+    </div>
    </main>
    
    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

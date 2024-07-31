@@ -183,7 +183,8 @@
    <main class="main w-full z-50  h-24">
      <div class="flex pt-8 ">
        <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก SANKO -> VENDOR</p>
-       <p class="flex-1 text-right"> {{currentDate | date: 'medium'}} </p>
+      <!--  <p class="flex-1 text-right"> {{currentDate | date: 'medium'}} </p> -->
+       <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div> 
      </div>
      <div>
        <div class="flex flex-col">
@@ -372,7 +373,8 @@
                <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
            </a>
        </div>
-       <div class="pt-4 pr-12 text-right flex-1">{{currentDate | date: 'medium'}} </div>
+       <!-- <div class="pt-4 pr-12 text-right flex-1">{{currentDate | date: 'medium'}} </div> -->
+       <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div> 
    </div>
    </main>
    
