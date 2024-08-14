@@ -184,8 +184,9 @@
      <div class="flex pt-8 ">
        <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก SANKO -> VENDOR</p>
       <!--  <p class="flex-1 text-right"> {{currentDate | date: 'medium'}} </p> -->
-       <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div> 
-     </div>
+    <!--    <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div>  -->
+    <div><h1> {{ time| date: 'hh:mm:ss a' }} </h1></div>    
+  </div>
      <div>
        <div class="flex flex-col">
          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -210,10 +211,10 @@
                  </thead>
                  <tbody>
                    <tr class="border  border-black">
-                     <td class="whitespace-nowrap px-6 py-4 font-medium">08.40</td>
-                     <td class="whitespace-nowrap px-6 py-4">บริษัทไทย ปาร์เกอร์</td>
-                     <td class="whitespace-nowrap px-6 py-4">สมนึก</td>
-                     <td class="whitespace-nowrap px-6 py-4">ง 4555</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4 font-medium">08.40</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">บริษัทไทย ปาร์เกอร์</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">สมนึก</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">ง 4555</td>
                      <td class="bggreen border border-black whitespace-nowrap  py-4">
                          <div>
                            <p>item1</p>
@@ -254,11 +255,11 @@
    
                    </tr>
                    <tr class="border  border-black">
-                    <td class="whitespace-nowrap px-6 py-4 font-medium">08.40</td>
-                    <td class="whitespace-nowrap px-6 py-4">บริษัทไทย ปาร์เกอร์</td>
-                    <td class="whitespace-nowrap px-6 py-4">สมนึก</td>
-                    <td class="whitespace-nowrap px-6 py-4">ง 4555</td>
-                    <td class="bggreen border border-black whitespace-nowrap  py-4">
+                    <td class="whitespace-nowrap px-6 bgyellow py-4 font-medium">08.40</td>
+                    <td class="whitespace-nowrap px-6 bgyellow py-4">บริษัทไทย ปาร์เกอร์</td>
+                    <td class="whitespace-nowrap px-6 bgyellow py-4">สมนึก</td>
+                    <td class="whitespace-nowrap px-6 bgyellow py-4">ง 4555</td>
+                    <td class="bgyellow border border-black whitespace-nowrap  py-4">
                         <div>
                           <p>item1</p>
                         </div>
@@ -267,7 +268,7 @@
                           <p>item2</p>
                         </div>
                     </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>4.00</p>
                        </div>
@@ -276,7 +277,7 @@
                          <p>2,000.00</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>PCS</p>
                        </div>
@@ -285,7 +286,7 @@
                          <p>PCS</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>WAIT</p>
                        </div>
@@ -302,7 +303,7 @@
                     <td class="whitespace-nowrap px-6 py-4">บริษัทไทย ปาร์เกอร์</td>
                     <td class="whitespace-nowrap px-6 py-4">สมนึก</td>
                     <td class="whitespace-nowrap px-6 py-4">ง 4555</td>
-                    <td class="bggreen border border-black whitespace-nowrap  py-4">
+                    <td class=" border border-black whitespace-nowrap  py-4">
                         <div>
                           <p>item1</p>
                         </div>
@@ -311,7 +312,7 @@
                           <p>item2</p>
                         </div>
                     </td>
-                     <td class="bggreen border border-black whitespace-nowrap py-4">
+                     <td class=" border border-black whitespace-nowrap py-4">
                        <div>
                          <p>3.00</p>
                        </div>
@@ -320,7 +321,7 @@
                          <p>20,000.00</p>
                        </div>
                      </td>
-                     <td class="bggreen  border border-black whitespace-nowrap py-4">
+                     <td class="  border border-black whitespace-nowrap py-4">
                        <div>
                          <p>PCS</p>
                        </div>
@@ -329,7 +330,7 @@
                          <p>PCS</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class=" border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>DELAY</p>
                        </div>
@@ -363,9 +364,9 @@
       <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
      </div>
      
-     <div class="flex fixed bottom-0 left-0 z-50 w-full h-16 bg-white border border-black  ">
-       <div class="flex-1 w-3/12 pt-4">เลือกหน้า</div>
-       <div class="flex-1 grid h-full max-w-lg grid-cols-2 mx-auto font-medium">
+     <div class="flex fixed bottom-0 left-0 z-50 grid-cols-3 grid w-full h-16 bg-white border border-black  ">
+       <div class="flex-1  ">เลือกหน้า</div>
+       <div class="flex-1  h-full max-w-lg  mx-auto font-medium">
            <a routerLink="/dash1" type="button" class="  inline-flex flex-col items-center justify-center px-5   group">
                <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">SANKO->VD</p> 
            </a>
@@ -373,9 +374,14 @@
                <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
            </a>
        </div>
+            <div class="text-right">
+              {{ time | date: 'hh:mm:ss a' }} 
+            </div>
+           
        <!-- <div class="pt-4 pr-12 text-right flex-1">{{currentDate | date: 'medium'}} </div> -->
-       <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div> 
-   </div>
+<!--        <div class="pt-4 pr-12 text-right flex-1"> {{time | date: 'medium'}}</div>  -->
+   
+</div>
    </main>
    
    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

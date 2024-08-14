@@ -4,6 +4,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Subscription, timer } from "rxjs";
 import { map, share } from "rxjs/operators";
 
+
 @Component({
   selector: 'app-dashboard-1',
   standalone: true,
@@ -22,12 +23,12 @@ export class Dashboard1Component {
   this.time = new Date().toLocaleString; 
   }, 1000);
   } */
-  time = new Date();
+    //time = new Date();
     rxTime = new Date();
     intervalId :any;
     subscription: Subscription = new Subscription;
   
-    ngOnInit() {
+    /* ngOnInit() {
       // Using Basic Interval
       this.intervalId = setInterval(() => {
         this.time = new Date();
@@ -55,7 +56,10 @@ export class Dashboard1Component {
       if (this.subscription) {
         this.subscription.unsubscribe();
       }
-    }
+    } */
+      time: Date = new Date();
+      timer: any;
+      
 }
 
  

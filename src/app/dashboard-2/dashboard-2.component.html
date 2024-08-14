@@ -178,12 +178,14 @@
      }
     
    </style>
-   
+      
+
    <main class="main ">
      <div class="flex pt-8 w-100">
        <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก VENDOR -> SANKO</p>
-       <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div> 
-       <div><h1> {{ rxTime | date: 'hh:mm:ss a' }} </h1></div>
+       <!-- <div class="pt-4 pr-12 text-right flex-1">{{rxTime | date: 'medium'}} </div> 
+       -->
+     <div><h1> {{ currentDate | date: 'hh:mm:ss a' }} </h1></div> 
      </div>
      <div>
        <div class="flex flex-col">
@@ -209,10 +211,10 @@
                  </thead>
                  <tbody>
                    <tr class="border  border-black">
-                     <td class="whitespace-nowrap px-6 py-4 font-medium">10:00 AM</td>
-                     <td class="whitespace-nowrap px-6 py-4">ESI</td>
-                     <td class="whitespace-nowrap px-6 py-4">กนกศักดิ์</td>
-                     <td class="whitespace-nowrap px-6 py-4">3805</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4 font-medium">10:00 AM</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">ESI</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">กนกศักดิ์</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">3805</td>
                      <td class="bggreen border border-black whitespace-nowrap  py-4">
                          <div>
                            <p>Filter 3321</p>
@@ -261,11 +263,11 @@
    
                    </tr>
                    <tr class="border  border-black">
-                     <td class="whitespace-nowrap px-6 py-4 font-medium">10:00 AM</td>
-                     <td class="whitespace-nowrap px-6 py-4">ESI</td>
-                     <td class="whitespace-nowrap px-6 py-4">กนกศักดิ์</td>
-                     <td class="whitespace-nowrap px-6 py-4">3805</td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="whitespace-nowrap bgyellow px-6 py-4 font-medium">10:00 AM</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">ESI</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">กนกศักดิ์</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">3805</td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                          <div>
                            <p>Filter 3321</p>
                          </div>
@@ -274,7 +276,7 @@
                            <p>IX DU</p>
                          </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>2</p>
                        </div>
@@ -283,7 +285,7 @@
                          <p>1</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>ลังเหล็ก</p>
                        </div>
@@ -292,7 +294,7 @@
                          <p>เลท</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>complete</p>
                        </div>
@@ -301,7 +303,7 @@
                          <p>complete</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
                        <div>
                          <p></p>
                        </div>
@@ -317,7 +319,7 @@
                      <td class="whitespace-nowrap px-6 py-4">ESI</td>
                      <td class="whitespace-nowrap px-6 py-4">กนกศักดิ์</td>
                      <td class="whitespace-nowrap px-6 py-4">3805</td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class=" border border-black whitespace-nowrap  py-4">
                          <div>
                            <p >Filter 3321</p>
                          </div>
@@ -326,7 +328,7 @@
                            <p>IX DU</p>
                          </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap py-4">
+                     <td class=" border border-black whitespace-nowrap py-4">
                        <div>
                          <p>2</p>
                        </div>
@@ -335,7 +337,7 @@
                          <p>1</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap py-4">
+                     <td class=" border border-black whitespace-nowrap py-4">
                        <div>
                          <p>ลังเหล็ก</p>
                        </div>
@@ -344,7 +346,7 @@
                          <p>เลท</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class=" border border-black whitespace-nowrap  py-4">
                        <div>
                          <p>complete</p>
                        </div>
@@ -353,7 +355,7 @@
                          <p>complete</p>
                        </div>
                      </td>
-                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                     <td class=" border border-black whitespace-nowrap  py-4">
                        <div>
                          <p></p>
                        </div>
@@ -387,9 +389,9 @@
       <input type="text" placeholder="0"  class="flex-1 tb1 border border-black"  disabled/>
      </div>
 
-     <div class="flex fixed bottom-0 left-0 z-50 w-full h-16 bg-white border border-black  ">
-       <div class="flex-1 w-3/12 pt-4">เลือกหน้า</div>
-       <div class="flex-1 grid h-full max-w-lg grid-cols-2 mx-auto font-medium">
+     <div class="flex fixed bottom-0 grid-cols-3 grid left-0 z-50 w-full h-16 bg-white border border-black  ">
+       <div class="flex-1  ">เลือกหน้า</div>
+       <div class="flex-1  h-full max-w-lg  mx-auto font-medium">
            
            <a routerLink="/dash1" type="button" class=" inline-flex flex-col items-center justify-center px-5   group">
             
@@ -399,8 +401,10 @@
                <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
            </a>
        </div>
-       <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div> 
-    
+      <!--  <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div>  -->
+      <div>
+        <div class="text-right"> {{ time | date: 'hh:mm:ss a' }} </div> 
+      </div>
      
     
     

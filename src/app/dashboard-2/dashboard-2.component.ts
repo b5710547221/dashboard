@@ -4,6 +4,8 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Subscription, timer } from "rxjs";
 import { map, share } from "rxjs/operators";
+
+
 @Component({
   selector: 'app-dashboard-2',
   standalone: true,
@@ -12,16 +14,17 @@ import { map, share } from "rxjs/operators";
   styleUrl: './dashboard-2.component.css',
   providers: [DatePipe]
 })
-export class Dashboard2Component implements OnInit, OnDestroy  {
+export class Dashboard2Component  {
    currentDate = new Date();
-   /*  time :any = new Date()
+   time :any = new Date()
+   /*  
     
     getCurrentDate() {
     setInterval(() => {
     this.time = new Date().toLocaleString; 
     }, 1000);
     } */
-    time = new Date();
+    /* time = new Date();
     rxTime = new Date();
     intervalId :any;
     subscription: Subscription = new Subscription;
@@ -54,5 +57,5 @@ export class Dashboard2Component implements OnInit, OnDestroy  {
       if (this.subscription) {
         this.subscription.unsubscribe();
       }
-    }
+    } */
 }
