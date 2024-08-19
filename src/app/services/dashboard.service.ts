@@ -9,6 +9,6 @@ export class DashboardService {
   constructor(private httpClient: HttpClient) {}
 
   getEmployee(): Observable<any> {
-    return this.httpClient.get('http://localhost:3000/employees');
+    return this.httpClient.get('https://sanko-be.vercel.app/employees');
   }
 }
