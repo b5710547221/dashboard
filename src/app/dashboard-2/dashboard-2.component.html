@@ -1,94 +1,424 @@
-<div class="row">
-  <div class="col-12">
-    <div id="report">
-      <div class="report-header">
-        <div>ตารางแสดงเวลาจัดส่งชิ้นงานจาก VENDOR -> SANKO</div>
-        <div>{{ timer | date : "dd/MM/yyyy hh:mm:ss" }}</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+    /*  :host {
+       --bright-blue: oklch(51.01% 0.274 263.83);
+       --electric-violet: oklch(53.18% 0.28 296.97);
+       --french-violet: oklch(47.66% 0.246 305.88);
+       --vivid-pink: oklch(69.02% 0.277 332.77);
+       --hot-red: oklch(61.42% 0.238 15.34);
+       --orange-red: oklch(63.32% 0.24 31.68);
+   
+       --gray-900: oklch(19.37% 0.006 300.98);
+       --gray-700: oklch(36.98% 0.014 302.71);
+       --gray-400: oklch(70.9% 0.015 304.04);
+   
+       --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+         180deg,
+         var(--orange-red) 0%,
+         var(--vivid-pink) 50%,
+         var(--electric-violet) 100%
+       );
+   
+       --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+         90deg,
+         var(--orange-red) 0%,
+         var(--vivid-pink) 50%,
+         var(--electric-violet) 100%
+       );
+   
+       --pill-accent: var(--bright-blue);
+   
+       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+         "Segoe UI Symbol";
+       box-sizing: border-box;
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+     }
+   
+     h1 {
+       font-size: 3.125rem;
+       color: var(--gray-900);
+       font-weight: 500;
+       line-height: 100%;
+       letter-spacing: -0.125rem;
+       margin: 0;
+       font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+         "Segoe UI Symbol";
+     }
+   
+     p {
+       margin: 0;
+       color: var(--black);
+     }
+   
+     main {
+       width: 100%;
+       min-height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 1rem;
+       box-sizing: inherit;
+       position: relative;
+     }
+   
+     .angular-logo {
+       max-width: 9.2rem;
+     }
+   
+     .content {
+       display: flex;
+       justify-content: space-around;
+       width: 100%;
+       max-width: 700px;
+       margin-bottom: 3rem;
+     }
+   
+     .content h1 {
+       margin-top: 1.75rem;
+     }
+   
+     .content p {
+       margin-top: 1.5rem;
+     }
+   
+     .divider {
+       width: 1px;
+       background: var(--red-to-pink-to-purple-vertical-gradient);
+       margin-inline: 0.5rem;
+     }
+   
+     .pill-group {
+       display: flex;
+       flex-direction: column;
+       align-items: start;
+       flex-wrap: wrap;
+       gap: 1.25rem;
+     }
+   
+     .pill {
+       display: flex;
+       align-items: center;
+       --pill-accent: var(--bright-blue);
+       background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+       color: var(--pill-accent);
+       padding-inline: 0.75rem;
+       padding-block: 0.375rem;
+       border-radius: 2.75rem;
+       border: 0;
+       transition: background 0.3s ease;
+       font-family: var(--inter-font);
+       font-size: 0.875rem;
+       font-style: normal;
+       font-weight: 500;
+       line-height: 1.4rem;
+       letter-spacing: -0.00875rem;
+       text-decoration: none;
+     }
+   
+     .pill:hover {
+       background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+     }
+   
+     .pill-group .pill:nth-child(6n + 1) {
+       --pill-accent: var(--bright-blue);
+     }
+     .pill-group .pill:nth-child(6n + 2) {
+       --pill-accent: var(--french-violet);
+     }
+     .pill-group .pill:nth-child(6n + 3),
+     .pill-group .pill:nth-child(6n + 4),
+     .pill-group .pill:nth-child(6n + 5) {
+       --pill-accent: var(--hot-red);
+     }
+   
+     .pill-group svg {
+       margin-inline-start: 0.25rem;
+     }
+   
+     .social-links {
+       display: flex;
+       align-items: center;
+       gap: 0.73rem;
+       margin-top: 1.5rem;
+     }
+   
+     .social-links path {
+       transition: fill 0.3s ease;
+       fill: var(--gray-400);
+     }
+   
+     .social-links a:hover svg path {
+       fill: var(--gray-900);
+     } */
+   
+     @media screen and (max-width: 650px) {
+      /*  .content {
+         flex-direction: column;
+         width: max-content;
+       }
+   
+       .divider {
+         height: 1px;
+         width: 100%;
+         background: var(--red-to-pink-to-purple-horizontal-gradient);
+         margin-block: 1.5rem;
+       } */
+     }
+    
+   </style>
+      
+
+   <main class="main ">
+     <div class="flex pt-8 w-100">
+       <p class="flex-1 ">ตารางแสดงเวลาจัดส่งชิ้นงานจาก VENDOR -> SANKO</p>
+       <!-- <div class="pt-4 pr-12 text-right flex-1">{{rxTime | date: 'medium'}} </div> 
+       -->
+     <div><h1> {{ currentDate | date: 'hh:mm:ss a' }} </h1></div> 
+     </div>
+     <div>
+       <div class="flex flex-col">
+         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+           <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+             <div class="">
+               <table
+                 class="tb1 min-w-full text-left text-sm font-light text-surface text-black">
+                 <thead
+                   class="border border-neutral-200 font-medium border-black">
+                   <tr>
+                     <th scope="col" class="px-6 py-4">เวลา</th>
+                     <th scope="col" class="px-6 py-4">ชื่อบริษัท</th>
+                     <th scope="col" class="px-6 py-4">ชื่อคนขับ</th>
+                     <th scope="col" class="px-6 py-4">ทะเบียนรถ</th>
+                     <th scope="col" class="px-6 py-4">สินค้า</th>
+                     <th scope="col" class="px-6 py-4">จำนวน</th>
+                     <th scope="col" class="px-6 py-4">หน่วย</th>
+                     <th scope="col" class="px-6 py-4">สถานะ</th>
+                     <th scope="col" class="px-6 py-4">หมายเหตุ</th>
+                 
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr class="border  border-black">
+                     <td class="whitespace-nowrap bggreen px-6 py-4 font-medium">10:00 AM</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">ESI</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">กนกศักดิ์</td>
+                     <td class="whitespace-nowrap bggreen px-6 py-4">3805</td>
+                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                         <div>
+                           <p>Filter 3321</p>
+                         </div>
+                         <hr/>
+                         <div>
+                           <p>IX DU</p>
+                         </div>
+                     </td>
+                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>2</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>1</p>
+                       </div>
+                     </td>
+                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>ลังเหล็ก</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>เลท</p>
+                       </div>
+                     </td>
+                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>complete</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>complete</p>
+                       </div>
+                     </td>
+                     <td class="bggreen border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p></p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p></p>
+                       </div>
+                     </td>
+   
+                   </tr>
+                   <tr class="border  border-black">
+                     <td class="whitespace-nowrap bgyellow px-6 py-4 font-medium">10:00 AM</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">ESI</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">กนกศักดิ์</td>
+                     <td class="whitespace-nowrap bgyellow px-6 py-4">3805</td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
+                         <div>
+                           <p>Filter 3321</p>
+                         </div>
+                         <hr/>
+                         <div>
+                           <p>IX DU</p>
+                         </div>
+                     </td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>2</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>1</p>
+                       </div>
+                     </td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>ลังเหล็ก</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>เลท</p>
+                       </div>
+                     </td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>complete</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>complete</p>
+                       </div>
+                     </td>
+                     <td class="bgyellow border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p></p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p></p>
+                       </div>
+                     </td>
+   
+                   </tr>
+                   <tr class="border  border-black">
+                     <td class="whitespace-nowrap px-6 py-4 font-medium">10:00 AM</td>
+                     <td class="whitespace-nowrap px-6 py-4">ESI</td>
+                     <td class="whitespace-nowrap px-6 py-4">กนกศักดิ์</td>
+                     <td class="whitespace-nowrap px-6 py-4">3805</td>
+                     <td class=" border border-black whitespace-nowrap  py-4">
+                         <div>
+                           <p >Filter 3321</p>
+                         </div>
+                         <hr/>
+                         <div>
+                           <p>IX DU</p>
+                         </div>
+                     </td>
+                     <td class=" border border-black whitespace-nowrap py-4">
+                       <div>
+                         <p>2</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>1</p>
+                       </div>
+                     </td>
+                     <td class=" border border-black whitespace-nowrap py-4">
+                       <div>
+                         <p>ลังเหล็ก</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>เลท</p>
+                       </div>
+                     </td>
+                     <td class=" border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p>complete</p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p>complete</p>
+                       </div>
+                     </td>
+                     <td class=" border border-black whitespace-nowrap  py-4">
+                       <div>
+                         <p></p>
+                       </div>
+                       <hr/>
+                       <div>
+                         <p></p>
+                       </div>
+                     </td>
+   
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="flex mt-32 z-50 w-full h-24 bg-white ">
+      <h1 class="flex-1 ">Total</h1>
+      <input type="text" placeholder="2"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 blue">Wait</h1>
+      <input type="text" placeholder="3"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 blue">Wait(C)</h1>
+      <input type="text" placeholder="4"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 green">Complete</h1>
+      <input type="text" placeholder="2"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 red">Delay</h1>
+      <input type="text" placeholder="5"  class="flex-1 tb1 border border-black"  disabled/>
+      <h1 class="flex-1 yellow">Cancel</h1>
+      <input type="text" placeholder="3"  class="flex-1 tb1 border border-black"  disabled/>
+     </div>
+
+     <div class="flex fixed bottom-0 grid-cols-3 grid left-0 z-50 w-full h-16 bg-white border border-black  ">
+       <div class="flex-1  ">เลือกหน้า</div>
+       <div class="flex-1  h-full max-w-lg  mx-auto font-medium">
+           
+           <a routerLink="/dash1" type="button" class=" inline-flex flex-col items-center justify-center px-5   group">
+            
+               <p class="tb1   group-hover:text-blue-600 dark:group-hover:text-blue-500">SANKO->VD</p> 
+           </a>
+           <a routerLink="/dash2" type="button" class=" flex-1 inline-flex flex-col items-center justify-center px-5   group">
+               <p class="tb1  group-hover:text-blue-600 dark:group-hover:text-blue-500">VD->SANKO</p>
+           </a>
+       </div>
+      <!--  <div class="pt-4 pr-12 text-right flex-1">{{time | date: 'medium'}} </div>  -->
+      <div>
+        <div class="text-right"> {{ time | date: 'hh:mm:ss a' }} </div> 
       </div>
-      <div class="report-body">
-        <table id="report-table" class="">
-          <thead>
-            <tr>
-              <th class="text-center">เวลา</th>
-              <th class="">บริษัท</th>
-              <th class="">คนขับ</th>
-              <th class="text-center">ทะเบียนรถ</th>
-              <th class="">สินค้า</th>
-              <th class="text-center">จำนวน</th>
-              <th class="text-center">หน่วยนับ</th>
-              <th class="text-center">สถานะ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="let schedule of scheduleData"
-              [ngClass]="{
-                wait: schedule[10] === 1,
-                waitc: schedule[10] === 2,
-                complete: schedule[10] === 3,
-                delay: schedule[10] === 4,
-                cancel: schedule[10] === 5
-              }"
-            >
-              <td class="text-center">{{ schedule[3] | date : "HH:mm" }}</td>
-              <td class="">
-                {{ schedule[2] }}
-              </td>
-              <td class="">{{ schedule[5] }}</td>
-              <td class="text-center">{{ schedule[6] }}</td>
-              <td class="">
-                {{ schedule[7] }}
-              </td>
-              <td class="text-center">
-                {{ schedule[8] | number }}
-              </td>
-              <td class="text-center">
-                {{ schedule[9] }}
-              </td>
-              <td class="text-center">
-                <div *ngIf="schedule[10] == 1">WAIT</div>
-                <div *ngIf="schedule[10] == 2">WAITC</div>
-                <div *ngIf="schedule[10] == 3">COMPLETE</div>
-                <div *ngIf="schedule[10] == 4">DELAY</div>
-                <div *ngIf="schedule[10] == 5">CANCEL</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="summary-lists">
-          <div class="summary-item">
-            <div class="title">Total</div>
-            <div class="count-box">{{ totalCount }}</div>
-          </div>
-          <div class="summary-item">
-            <div class="title">Wait</div>
-            <div class="count-box">{{ waitCount }}</div>
-          </div>
-          <div class="summary-item">
-            <div class="title">Wait(C)</div>
-            <div class="count-box">{{ waitCCount }}</div>
-          </div>
-          <div class="summary-item">
-            <div class="title">Complete</div>
-            <div class="count-box">{{ completeCount }}</div>
-          </div>
-          <div class="summary-item">
-            <div class="title">Delay</div>
-            <div class="count-box">{{ delayCount }}</div>
-          </div>
-          <div class="summary-item">
-            <div class="title">Cancel</div>
-            <div class="count-box">{{ cancelCount }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="report-footer">
-        <div>เลือกหน้า</div>
-        <div>
-          <a routerLink="/dash1" class="button-link">SANKO -> VENDOR </a>
-          <a routerLink="/dash2" class="button-link acitve">VENDOR -> SANKO </a>
-        </div>
-      </div>
+     
+    
+    
     </div>
-  </div>
-</div>
+   </main>
+   
+   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+   
+   
+
+   

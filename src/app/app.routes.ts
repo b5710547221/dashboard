@@ -5,6 +5,6 @@ import { Dashboard1Component } from './dashboard-1/dashboard-1.component';
 
 //export const routes: Routes = [];
 export const routes: Routes = [
-  { path: 'dash1', component: Dashboard1Component },
-  { path: 'dash2', component: Dashboard2Component },
-];
+    { path: 'dash1', component: Dashboard1Component },
+    { path: 'dash2', component: Dashboard2Component }
+  ];
